@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#050505"><title>Noir Music</title><link rel="stylesheet" href="/style.css">
+  <script src="https://telegram.org/js/telegram-web-app.js"></script>
+</head>
+<body>
+  <main>
+    <header><div class="brand">NOIR<span>•</span>MUSIC</div><div class="avatar" id="avatar">N</div></header>
+    <section class="hero"><p>ВАША МУЗЫКА</p><h1>Включайте<br><i>своё.</i></h1><button class="play-all" id="playAll">▶ &nbsp;Слушать всё</button></section>
+    <nav><button class="active" data-view="library">Библиотека</button><button data-view="playlists">Плейлисты</button></nav>
+    <section id="library" class="view"><div class="section-head"><h2>Треки</h2><span id="trackCount"></span></div><div class="notice" id="empty">Отправьте MP3 боту — он появится здесь.</div><div id="trackList" class="track-list"></div></section>
+    <section id="playlists" class="view hidden"><div class="section-head"><h2>Плейлисты</h2><button class="outline" id="newPlaylist">+ Создать</button></div><div id="playlistList" class="playlist-list"></div></section>
+  </main>
+  <section class="player hidden" id="player"><div class="player-art">♫</div><div class="now"><b id="nowTitle">—</b><small id="nowArtist">—</small></div><button id="previous" aria-label="Предыдущий">‹</button><button class="circle" id="toggle" aria-label="Воспроизвести">▶</button><button id="next" aria-label="Следующий">›</button><input id="seek" type="range" min="0" max="100" value="0" aria-label="Прогресс"></section>
+  <dialog id="playlistDialog"><form method="dialog"><h2>Новый плейлист</h2><input id="playlistName" maxlength="80" placeholder="Например, Ночные поездки" autofocus><div><button value="cancel" class="outline">Отмена</button><button id="savePlaylist" value="default">Создать</button></div></form></dialog>
+  <script src="/app.js"></script>
+</body>
+</html>
